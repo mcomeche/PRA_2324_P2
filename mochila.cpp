@@ -61,7 +61,7 @@ int main(){
     std::cout<<std::endl;
   }
   for(int i = 0; i < tam; i++){
-    std::cout<<dev[i]<<" ";
+	std::cout<<dev[i]<<" "<<std::endl;
   }
   std::cout<<std::endl<<"Resultado = "<<resultado<<std::endl;	
   

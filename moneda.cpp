@@ -3,7 +3,7 @@
 #include <limits>
 #include<algorithm>
 
-int cambio(std::vector<int>moneda , int M, std::vector<int>& m,int tam, int tabla[4][10], int infinito){
+int cambio(std::vector<int>moneda , int M, std::vector<int>& m,int tam, int tabla[4][9], int infinito){
 	
 	for(int i = 0; i < M +1; i++){
                 tabla[0][i] = infinito;
@@ -36,11 +36,11 @@ int cambio(std::vector<int>moneda , int M, std::vector<int>& m,int tam, int tabl
 
 }
 int main(){
-	int M = 9;
+	int M = 8;
 	int tam = 3;
 	int infinito = std::numeric_limits<int>::max();
 	std::vector<int>moneda = {1, 4, 6};
-	int tabla [4][10];
+	int tabla [4][9];
 	std::vector<int> m= {0,0,0};
 
 	int resultado = cambio(moneda, M, m, tam, tabla, infinito);
@@ -52,7 +52,7 @@ int main(){
 		std::cout<<std::endl;
        }
 	for(int i = 0; i < tam; i++){
-		std::cout<<m[i]<<" ";
+		std::cout<<m[i]<<" "<<std::endl;
 	}
 	std::cout<<std::endl<<"Resultado = "<<resultado<<std::endl;	
 
